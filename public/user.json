@@ -1,0 +1,52 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "John Doe",
+            "username": "admin",
+            "password": "adminpass",
+            "email": "admin@gmail.com",
+            "role": {
+                "id": 1,
+                "name": "admin",
+                "description": "Admin user"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Smith Key",
+            "username": "smithkey",
+            "password": "SDFSSDFS SDFSDFSD",
+            "email": "smithkey@example.com",
+            "role": {
+                "id": 2,
+                "name": "counterpart",
+                "description": "Counterpart user"
+            }
+        },
+        {
+            "id": 3,
+            "name": "Molisa Rose",
+            "username": "molisa",
+            "password": "SDFSSDFS SDFSDFSD",
+            "email": "molisa@example.com",
+            "role": {
+                "id": 2,
+                "name": "counterpart",
+                "description": "Counterpart user"
+            }
+        },
+        {
+            "id": 4,
+            "name": "Robekca Santos",
+            "username": "robekca",
+            "password": "SDFSSDFS SDFSDFSD",
+            "email": "robekca@gmail.com",
+            "role": {
+                "id": 3,
+                "name": "user",
+                "description": "Player user"
+            }
+        }
+    ]
+}
