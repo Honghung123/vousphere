@@ -5,10 +5,13 @@ import { createSlice, Slice } from "@reduxjs/toolkit";
 
 export const initialState = (): { isLoggedIn: boolean; user: UserStateType } => {
     try {
-        const persistedData = localStorage.getItem("persist:root");
-        if (persistedData) {
-            const parsedData = JSON.parse(persistedData); // Parse chuỗi JSON
-            return parsedData; // Tách dữ liệu state (nested JSON)
+        const ISSERVER = typeof window === "undefined";
+        if (!ISSERVER) {
+            const persistedData = localStorage.getItem("persist:root");
+            if (persistedData) {
+                const parsedData = JSON.parse(persistedData); // Parse chuỗi JSON
+                return parsedData; // Tách dữ liệu state (nested JSON)
+            }
         }
     } catch (error) {
         console.error("Error parsing persisted state:", error);

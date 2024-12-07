@@ -1,5 +1,5 @@
+"use client";
 import { GameType } from "@/lib/definitions";
-import { UpdateUserForm } from "@/app/(dashboard)/admin/users/user-update-form";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";

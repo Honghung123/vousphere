@@ -1,7 +1,7 @@
+"use client";
 import { MobileDesktop } from "@/app/(dashboard)/admin/(charts)/bar-charts";
 import BasicLineChart from "@/app/(dashboard)/admin/(charts)/line-chart";
 import YearlyBreakup from "@/app/(dashboard)/admin/(charts)/statistics";
-import React from "react";
 
 export default function DashboardPage() {
     return (

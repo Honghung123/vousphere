@@ -6,7 +6,7 @@ import { UseFormSetError } from "react-hook-form";
 import { twMerge } from "tailwind-merge";
 
 export const defaultAvatar = "https://wutheringlab.com/wp-content/uploads/Shorekeeper-icon.webp";
-
+export const isClient = () => typeof window !== "undefined";
 export function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs));
 }

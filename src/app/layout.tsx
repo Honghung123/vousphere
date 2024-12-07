@@ -12,22 +12,7 @@ import { Provider } from "react-redux";
 import { persistor } from "@/lib/redux/store";
 import { PersistGate } from "redux-persist/integration/react";
 import ReduxStoreProvider from "@/app/ReduxStoreProvider";
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
-
-// export const metadata: Metadata = {
-//     title: "Home page",
-//     description: "Vou playground",
-// };
-
+export const dynamic = "force-dynamic";
 export default function RootLayout({
     children,
 }: Readonly<{

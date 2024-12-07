@@ -1,4 +1,4 @@
-import { Calendar, CalendarDays, FileQuestionIcon, Home } from "lucide-react";
+import { Calendar, CalendarDays, FileQuestionIcon, Home, SubscriptIcon } from "lucide-react";
 
 export const counterpartNavMain = [
     {
@@ -25,16 +25,21 @@ export const counterpartNavMain = [
             },
         ],
     },
-    // {
-    //     title: "Settings",
-    //     url: "/counterpart/settings",
-    //     icon: Settings,
-    //     items: [
-    //         {
-    //             title: "General Settings",
-    //             url: "/counterpart/general-settings",
-    //             icon: Settings,
-    //         },
-    //     ],
-    // },
+    {
+        title: "Subscription",
+        url: "/counterpart/subscription",
+        icon: SubscriptIcon,
+        items: [
+            {
+                title: "My subscription",
+                url: "/counterpart/subscription",
+                icon: SubscriptIcon,
+            },
+            {
+                title: "Register subscription",
+                url: "/counterpart/subscription/subscribe",
+                icon: SubscriptIcon,
+            },
+        ],
+    },
 ];

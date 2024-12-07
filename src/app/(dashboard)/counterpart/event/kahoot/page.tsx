@@ -1,5 +1,5 @@
+"use client";
 import QuestionForm from "@/app/(dashboard)/counterpart/event/kahoot/question-form";
-import React from "react";
 
 export default function QuestionsEvent() {
     return (

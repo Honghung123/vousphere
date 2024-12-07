@@ -1,4 +1,3 @@
-import { UserType } from "@/lib/definitions";
 import http, { isClient } from "@/lib/http";
 import {
     LoginRequestDTO,
@@ -7,7 +6,6 @@ import {
     RegisterResponseDTO,
     SlideSessionResponseDTO,
 } from "@/schemaValidations/auth.schema";
-import { MessageResType } from "@/schemaValidations/common.schema";
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_ENDPOINT;
 
@@ -50,7 +48,7 @@ const authApiRequest = {
             status: true,
             role: {
                 id: 1,
-                name: "counterpart",
+                name: payload.email === "admin@gmail.com" ? "admin" : "counterpart",
                 description: "admin",
             },
         };
@@ -80,43 +78,6 @@ const authApiRequest = {
         // return result as LoginResponseDTO;
         return true;
     },
-    auth: (body: { sessionToken: string; expiresAt: string }) =>
-        http.post("/api/auth", body, {
-            baseUrl: "",
-        }),
-    logoutFromNextServerToServer: (sessionToken: string) =>
-        http.post<MessageResType>(
-            "/auth/logout",
-            {},
-            {
-                headers: {
-                    Authorization: `Bearer ${sessionToken}`,
-                },
-            }
-        ),
-    logoutFromNextClientToNextServer: (force?: boolean | undefined, signal?: AbortSignal | undefined) =>
-        http.post<MessageResType>(
-            "/api/auth/logout",
-            {
-                force,
-            },
-            {
-                baseUrl: "",
-                signal,
-            }
-        ),
-    slideSessionFromNextServerToServer: (sessionToken: string) =>
-        http.post<SlideSessionResponseDTO>(
-            "/auth/slide-session",
-            {},
-            {
-                headers: {
-                    Authorization: `Bearer ${sessionToken}`,
-                },
-            }
-        ),
-    slideSessionFromNextClientToNextServer: () =>
-        http.post<SlideSessionResponseDTO>("/api/auth/slide-session", {}, { baseUrl: "" }),
 };
 
 export default authApiRequest;

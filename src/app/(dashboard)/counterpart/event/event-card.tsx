@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import { Calendar, Ticket } from "lucide-react";
 
 const EventCard = ({

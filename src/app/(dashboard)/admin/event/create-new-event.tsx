@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 
-const EventForm = () => {
+export default function EventForm() {
     const [name, setName] = useState("");
     const [image, setImage] = useState("");
     const [voucherCount, setVoucherCount] = useState(0);
@@ -28,9 +28,9 @@ const EventForm = () => {
 
     return (
         <form onSubmit={handleSubmit} className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold mb-4">Tạo Sự Kiện Mới</h2>
+            <h2 className="text-2xl font-bold mb-4">Create New Event</h2>
             <div className="mb-4">
-                <label className="block text-sm font-medium mb-2">Tên Sự Kiện</label>
+                <label className="block text-sm font-medium mb-2">Event Name</label>
                 <input
                     type="text"
                     value={name}
@@ -40,7 +40,7 @@ const EventForm = () => {
                 />
             </div>
             <div className="mb-4">
-                <label className="block text-sm font-medium mb-2">Hình Ảnh URL</label>
+                <label className="block text-sm font-medium mb-2">Event Image</label>
                 <input
                     type="url"
                     value={image}
@@ -50,7 +50,7 @@ const EventForm = () => {
                 />
             </div>
             <div className="mb-4">
-                <label className="block text-sm font-medium mb-2">Số Lượng Voucher</label>
+                <label className="block text-sm font-medium mb-2">Voucher Count</label>
                 <input
                     type="number"
                     value={voucherCount}
@@ -60,7 +60,7 @@ const EventForm = () => {
                 />
             </div>
             <div className="mb-4">
-                <label className="block text-sm font-medium mb-2">Thời Gian Bắt Đầu</label>
+                <label className="block text-sm font-medium mb-2">Start Time</label>
                 <input
                     type="datetime-local"
                     value={startTime}
@@ -70,7 +70,7 @@ const EventForm = () => {
                 />
             </div>
             <div className="mb-4">
-                <label className="block text-sm font-medium mb-2">Thời Gian Kết Thúc</label>
+                <label className="block text-sm font-medium mb-2">End Time</label>
                 <input
                     type="datetime-local"
                     value={endTime}
@@ -80,10 +80,8 @@ const EventForm = () => {
                 />
             </div>
             <button type="submit" className="w-full bg-blue-500 text-white font-bold py-2 rounded-md hover:bg-blue-600">
-                Tạo Sự Kiện
+                Create Event
             </button>
         </form>
     );
-};
-
-export default EventForm;
+}

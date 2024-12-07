@@ -43,16 +43,4 @@ export const adminNavMain = [
             },
         ],
     },
-    // {
-    //     title: "Settings",
-    //     url: "/admin/settings",
-    //     icon: Settings,
-    //     items: [
-    //         {
-    //             title: "General Settings",
-    //             url: "/admin/general-settings",
-    //             icon: Settings,
-    //         },
-    //     ],
-    // },
 ];

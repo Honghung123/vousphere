@@ -1,3 +1,4 @@
+"use client";
 import { adminNavMain } from "@/app/(dashboard)/admin/nav-links";
 import { counterpartNavMain } from "@/app/(dashboard)/counterpart/nav-links";
 import { NavMain } from "@/components/shared/sidebar/admin-dashboard/nav-main";
@@ -5,7 +6,7 @@ import { NavUser } from "@/components/shared/sidebar/admin-dashboard/nav-user";
 import { TeamSwitcher } from "@/components/shared/sidebar/team-switcher";
 import { Separator } from "@/components/ui/separator";
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader } from "@/components/ui/sidebar";
-import { AudioWaveform, Command, FileQuestionIcon, Frame, GalleryVerticalEnd, PieChart } from "lucide-react";
+import { AudioWaveform, Command, FileQuestionIcon, Frame, GalleryVerticalEnd, PieChart, User2Icon } from "lucide-react";
 
 const projects = [
     {
@@ -42,9 +43,9 @@ export function AdminSidebar({ ...props }: React.ComponentProps<typeof Sidebar>)
 export function CounterpartSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     const teamWorkspaces = [
         {
-            name: "Evil Corp.",
-            logo: Command,
-            plan: "Free",
+            name: "VouSphere",
+            logo: User2Icon,
+            plan: "Group information",
         },
     ];
     return (

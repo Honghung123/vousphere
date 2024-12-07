@@ -6,9 +6,9 @@ import { getCachedUsersStatistic } from "@/lib/react-query/dashboardCache";
 import { StatisticDataCardSkeleton } from "@/app/(dashboard)/skeletons";
 
 const YearlyBreakup = () => {
-    const { data, isLoading, isError, isPaused } = getCachedUsersStatistic();
-    if (isError) return <div>Error</div>;
-    if (isLoading || isPaused || !data) return <StatisticDataCardSkeleton items={{ icon: UsersRound }} />; // Isloading is true when api in queryFn was calling and data doesn't exist in cache
+    // const { data, isLoading, isError, isPaused } = getCachedUsersStatistic();
+    // if (isError) return <div>Error</div>;
+    // if (isLoading || isPaused || !data) return <StatisticDataCardSkeleton items={{ icon: UsersRound }} />; // Isloading is true when api in queryFn was calling and data doesn't exist in cache
     return (
         <Card title="Yearly Breakup" className="w-full h-full p-3">
             <div className="flex justify-between items-center">

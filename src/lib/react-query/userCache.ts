@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-import { getUserById, getUsers } from "@/app/(profile)/users/api";
 import { commonOptions } from "@/lib/react-query/options";
 
 export function useCachedUserQuery(id: number) {
@@ -17,4 +16,11 @@ export function useCachedUserListQuery() {
         queryFn: getUsers,
         ...commonOptions,
     });
+}
+function getUserById(id: number): any {
+    throw new Error("Function not implemented.");
+}
+
+function getUsers(): any {
+    throw new Error("Function not implemented.");
 }

@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { GameType } from "@/lib/definitions";
@@ -21,7 +21,7 @@ const games: GameType[] = [
     },
 ];
 
-const GameCard: React.FC<GameType> = () => {
+export default function GameCard() {
     return (
         <>
             <h1 className="text-2xl md:text-4xl font-bold">Game Management</h1>
@@ -65,6 +65,4 @@ const GameCard: React.FC<GameType> = () => {
             </div>{" "}
         </>
     );
-};
-
-export default GameCard;
+}

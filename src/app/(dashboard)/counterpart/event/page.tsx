@@ -1,8 +1,8 @@
+"use client";
 import EventCard from "@/app/(dashboard)/counterpart/event/event-card";
 import { Button } from "@/components/ui/button";
 import { EventGameType } from "@/lib/definitions";
 import Link from "next/link";
-import React from "react";
 
 const events: EventGameType[] = [
     {
